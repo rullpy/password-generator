@@ -41,7 +41,7 @@ pnpm install --frozen-lockfile
 3. Gere o bundle com Webpack
 
 ```bash
-npx webpack
+pnpm run build
 ```
 
 4. Execute o projeto
