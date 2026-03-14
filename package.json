@@ -6,7 +6,8 @@
   "main": "src/app.js",
   "scripts": {
     "start": "nodemon app.js --ignore frontend --ignore public",
-    "dev": "webpack -w"
+    "dev": "webpack -w",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",

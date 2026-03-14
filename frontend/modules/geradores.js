@@ -1,28 +1,33 @@
-const rand = (min, max) => {
-  return Math.floor(Math.random() * (max - min) + min);
+const rand = (max) => {
+  const array = new Uint32Array(1);
+  window.crypto.getRandomValues(array);
+  return array[0] % max;
 };
 
-const simbols = ",.;~^[]{}!@#$%&*()_-=+";
+const simbolsString = ",.;~^[]{}!@#$%&*()_-=+";
+const maisculaString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const minusculaString = "abcdefghijklmnopqrstuvwxyz";
+const numbersString = "0123456789";
 
-const maiscula = () => String.fromCharCode(rand(65, 91));
-const minuscula = () => String.fromCharCode(rand(97, 123));
-const numero = () => String.fromCharCode(rand(48, 58));
-const simbolo = () => simbols[rand(0, simbols.length)];
+const simbols = () => simbolsString[rand(simbolsString.length)];
+const maisculas = () => maisculaString[rand(maisculaString.length)];
+const minusculas = () => minusculaString[rand(minusculaString.length)];
+const numbers = () => numbersString[rand(numbersString.length)];
 
-export const geraSenha = (qtd, maisculas, minusculas, numeros, simbolos) => {
-  const senhaArray = [];
+export const geraSenha = (qtd, maisc, minusc, number, simbs) => {
+  const passwordArray = [];
   qtd = Number(qtd);
 
   for (let i = 0; i < qtd; i++) {
-    maisculas && senhaArray.push(maiscula());
-    minusculas && senhaArray.push(minuscula());
-    numeros && senhaArray.push(numero());
-    simbolos && senhaArray.push(simbolo());
+    maisc && passwordArray.push(maisculas());
+    minusc && passwordArray.push(minusculas());
+    number && passwordArray.push(numbers());
+    simbs && passwordArray.push(simbols());
   }
 
-  const senhaEmbaralhada = (array) => {
+  const passwordScrambled = (array) => {
     for (let i = array.length; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
+      const j = (rand(100) * (i + 1));
 
       [array[i], array[j]] = [array[j], array[i]];
     }
@@ -30,5 +35,7 @@ export const geraSenha = (qtd, maisculas, minusculas, numeros, simbolos) => {
     return array.join("").slice(0, qtd);
   };
 
-  return senhaEmbaralhada(senhaArray);
+  return passwordScrambled(passwordArray);
 };
+
+

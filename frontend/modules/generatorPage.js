@@ -1,14 +1,14 @@
 import { geraSenha } from "./geradores.js";
 import { animarSenha } from "./animacaoSenha.js";
 
-const qtd = document.querySelector(".qtd");
+const qtd = document.querySelector("#qtd");
 const button = document.querySelector(".gerar-senha");
 const clip = document.querySelector(".clip");
 
-const maisculas = document.querySelector(".chk-maiusculas");
-const minusculas = document.querySelector(".chk-minusculas");
-const numeros = document.querySelector(".chk-numeros");
-const simbolos = document.querySelector(".chk-simbolos");
+const maisculas = document.querySelector("#chk-maiusculas");
+const minusculas = document.querySelector("#chk-minusculas");
+const numeros = document.querySelector("#chk-numeros");
+const simbolos = document.querySelector("#chk-simbolos");
 
 const senhaGerada = document.querySelector(".senha-gerada");
 

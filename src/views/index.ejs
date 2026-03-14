@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Modelo</title>
+  <title>Password Generator</title>
 </head>
 
 <body>
@@ -18,13 +18,13 @@
         <button class="clip">Copy</button>
     </div>
     
-    Number of characters <input type="number" class="qtd" min="1" max="20"><br>
+    Number of characters <input type="number" id="qtd" value="15"><br>
     
     <section class="checkboxes">
-        <p> A-Z </p> <input type="checkbox" class="chk-maiusculas" checked="true"><br>
-        <p> a-z </p> <input type="checkbox" class="chk-minusculas" checked="true"><br>
-        <p> 1-9 </p> <input type="checkbox" class="chk-numeros" checked="true"><br>
-        <p> Simbols </p> <input type="checkbox" class="chk-simbolos" checked="true"><br>
+        <p> A-Z </p> <input type="checkbox" id="chk-maiusculas" checked="true"><br>
+        <p> a-z </p> <input type="checkbox" id="chk-minusculas" checked="true"><br>
+        <p> 1-9 </p> <input type="checkbox" id="chk-numeros" checked="true"><br>
+        <p> Simbols </p> <input type="checkbox" id="chk-simbolos" checked="true"><br>
     </section>
 
     <button class="gerar-senha">Generate</button>
