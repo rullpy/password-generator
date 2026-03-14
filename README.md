@@ -56,6 +56,12 @@ pnpm start
 pnpm run dev
 ```
 
+5. Acesse o projeto no navegador
+ 
+```bash
+http://localhost:PORT
+```
+
 🔒 Objetivo do projeto
 
 Este projeto foi desenvolvido com o objetivo de praticar conceitos de JavaScript moderno, manipulação do DOM, modularização de código e utilização de ferramentas como Webpack no fluxo de desenvolvimento frontend.
