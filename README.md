@@ -24,7 +24,7 @@ O usuário pode configurar os critérios da senha e clicar em **Gerar senha** pa
 - **JavaScript**
 - **Webpack** (empacotamento dos arquivos)
 
-## ⚙️ Como executar o projeto
+## ⚙️ Instalação
 
 1. Clone o repositório
 
@@ -37,6 +37,9 @@ git clone https://github.com/rullpy/password-generator
 ```bash
 pnpm install --frozen-lockfile
 ```
+
+## 🏃‍♂️ Executando o projeto
+- Antes de executar o projeto, crie um arquivo `.env` na raiz do projeto e configure as variáveis de ambiente necessárias.
 
 3. Gere o bundle com Webpack
 
